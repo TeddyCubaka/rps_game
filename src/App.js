@@ -1,7 +1,8 @@
 import './App.css';
+import Attack from './components/basics/attackButton';
 
 function App() {
-  return <div>Rare</div>;
+  return <Attack />;
 }
 
 export default App;
