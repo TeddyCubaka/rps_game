@@ -4,8 +4,10 @@ import TextArea from './components/clipboard/clipboard';
 
 function App() {
   return (
-    <TextArea />
-    <Attack />
+    <>
+      <TextArea />
+      <Attack />
+    </>
     );
 }
 
