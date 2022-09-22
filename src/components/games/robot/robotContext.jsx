@@ -1,13 +1,13 @@
 import React from "react";
 import { createContext } from "react";
 
-const Robots = createContext([])
-const RobotImage = createContext({
-    image1 : "https://uxwing.com/robotics-icon/",
-    image2 : "https://uxwing.com/neuromorphic-computing-icon/",
-    image3 : "https://uxwing.com/cloud-computing-icon/",
-    image4 : "https://uxwing.com/wp-content/themes/uxwing/download/internet-network-technology/non-fungible-tokens-nft-icon.svg",
-    image5 : "https://uxwing.com/vr-headset-icon/"
-})
+export const Robots = createContext([])
+export const RobotImage = createContext([
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Robot_icon.svg/48px-Robot_icon.svg.png',
+    "https://uxwing.com/wp-content/themes/uxwing/download/internet-network-technology/non-fungible-tokens-nft-icon.svg",
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Robot_icon_broken.svg/20px-Robot_icon_broken.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Robot_icon_%28WMF%29.svg/48px-Robot_icon_%28WMF%29.svg.png?20200529100310',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Robot_ic%C3%B4n.svg/91px-Robot_ic%C3%B4n.svg.png?20091011105542'
+])
 
-export const RobotContext = createContext([Robots, RobotImage])
+export const RobotContext = createContext({})

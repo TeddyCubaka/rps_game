@@ -11,7 +11,7 @@ export default function TextArea(){
     }
 
     return (
-      <div class="wrapper">
+      <div className="wrapper">
         <textarea rows="10" ref={myText } value={text} onChange={(e)=> {
           setText(e.target.value)
           }} ></textarea>
