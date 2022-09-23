@@ -11,21 +11,21 @@ export default function RobotHome (){
     return (
         <RobotContext.Provider value={{robotImage, robots, robotDetails}}>
             <div className='robot-home'>
-                <h2>Hey ! Wanna play a game ?</h2>
-                <p>Then, create any robot you.</p>
+                <h2>Did you want freind ?</h2>
+                <p>Then, create any robot you want.</p>
                 <table>
                     <thead>
                         <tr>
-                            <th>Vos robots</th>
-                            <th>Les robots par default</th>
+                            <th>Robot you create</th>
+                            <th>Default robot</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <td>Créer un robot</td>
                             <td> 
                                 <Link to="/robot">Create a robot</Link>
                             </td>
+                            <td>Search a robot</td>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -46,15 +46,6 @@ export default function RobotHome (){
                         }
                     </tbody>
                 </table>
-                <div>
-                    {robots.length ? robots.map((robot, index)=>(
-                        <div key={index}>
-                            <img src={robot.imageUrl} alt='' className='img-test'/>
-                            <div>Name : {robot.name} </div>
-                            <div>Function : {robot.function} </div>
-                        </div>
-                    )) : <span>Siuuu</span>}
-                </div>
             </div>
         </RobotContext.Provider>
     )

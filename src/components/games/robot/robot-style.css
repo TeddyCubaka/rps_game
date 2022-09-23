@@ -1,4 +1,20 @@
 .robot-home{
     width: 500px;
     background-color: blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    width: 90%;
+}
+table > tr{
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+th{
+    text-align: left;
 }
