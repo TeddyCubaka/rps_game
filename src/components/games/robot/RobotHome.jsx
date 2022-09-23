@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { RobotContext, RobotImageContext } from './robotContext'
 
 export default function RobotHome (){
-    const robotDetails = {imageUrl : "",name : "",function : ""}
     const robotImage = useContext(RobotImageContext);
     const robots = useContext(RobotContext);
+    const robotDetails = {imageUrl : "",name : "",function : ""}
     return (
         <RobotContext.Provider value={{robotImage, robots, robotDetails}}>
             <h2>Hey ! Wanna play a game ?</h2>
@@ -36,12 +36,15 @@ export default function RobotHome (){
                     }
                 </tbody>
             </table>
-            <button onClick={()=>{
-                robotImage.map((element)=>(robots.push(element)));
-                robots.push('2');
-                console.log(robots);
-            }}>Click me</button>
-
+            <div>
+                {robots.length ? robots.map((robot, index)=>(
+                    <div key={index}>
+                        <img src={robot.imageUrl} alt='' className='img-test'/>
+                        <div>Name : {robot.name} </div>
+                        <div>Function : {robot.function} </div>
+                    </div>
+                )) : <span>Siuuu</span>}
+            </div>
         </RobotContext.Provider>
     )
 }
