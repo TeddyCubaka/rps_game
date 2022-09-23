@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { RobotContext, RobotImageContext } from './robotContext';
 import './robot-style.css';
+import RobotCard from './robot-card';
 
 export default function RobotHome (){
     const robotImage = useContext(RobotImageContext);
@@ -33,12 +34,7 @@ export default function RobotHome (){
                             robotImage.map((image, index)=>(
                                 <tr key={index}>
                                     <td>{index+1}  
-                                        {robots[index] ? 
-                                        <div>
-                                            <img src={robots[index].imageUrl} alt='' className='img-test'/>
-                                            <div>Name : {robots[index].name} </div>
-                                            <div>Function : {robots[index].function} </div>
-                                        </div> : <span> ... </span>}
+                                        {robots[index] ? <RobotCard robot={robots[index]} index={index} key={index} /> : <span> ... </span>}
                                     </td>
                                     <td><img src={image} alt="" className='img-test'/></td>
                                 </tr>

@@ -1,15 +1,18 @@
 import React from "react";
 
-export default function RobotCard (){
+export default function RobotCard ({robot, index}){
     return (
-        <div>
-            {robots.length ? robots.map((robot, index)=>(
-                <div key={index}>
+        <div className="robot-card">
+            <div className='robot-card'>
+                {index ? <span> {index} </span> : flase}
+                <div>
                     <img src={robot.imageUrl} alt='' className='img-test'/>
-                    <div>Name : {robot.name} </div>
-                    <div>Function : {robot.function} </div>
                 </div>
-            )) : <span>Siuuu</span>}
+                <div>
+                    <div>{robot.name} </div>
+                    <div>{robot.function} </div>
+                </div>
+            </div>
         </div>
     )
 }
