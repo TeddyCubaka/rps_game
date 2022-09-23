@@ -1,5 +1,5 @@
-.App{
-  background-color: #B9B9B9;
+.App {
+  background-color: #b9b9b9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,27 +7,27 @@
   padding: 0px;
 }
 textarea {
-    width: 100%;
-    padding: 20px;
-    font-size: 15px;
-    outline: none;
-    border: 1px solid #613bdb;
-    border-radius: 10px;
-    background: #c1c9df;
-  }
-  
-  button {
-    height: 45px;
-    width: 155px;
-    color: #fff;
-    background: #613bdb;
-    border: none;
-    border-radius: 5px;
-    font-weight: 400;
-    margin-top: 8px;
-    cursor: pointer;
-  }
-.img-test{
+  width: 100%;
+  padding: 20px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid #613bdb;
+  border-radius: 10px;
+  background: #c1c9df;
+}
+
+button {
+  height: 45px;
+  width: 155px;
+  color: #fff;
+  background: #613bdb;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.img-test {
   width: 40px;
   height: 40px;
 }
