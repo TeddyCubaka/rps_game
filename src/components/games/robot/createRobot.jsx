@@ -8,7 +8,7 @@ export default function CreateRobot (){
     const robotDetails = {imageUrl : "",name : "",function : ""}
     const [error, setError] = useState('')
     return (
-        <div>
+        <div className="create-div">
             <label forhtml='name'>Name your robot</label>
             <input type='text' id='name' name='name' required onChange={(e)=>{
                 robotDetails.name = e.target.value;

@@ -1,3 +1,11 @@
+.App{
+  background-color: #B9B9B9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
 textarea {
     width: 100%;
     padding: 20px;

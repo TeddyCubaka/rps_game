@@ -5,12 +5,14 @@ import RobotHome from './components/games/robot/RobotHome';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<RobotHome />} />
-        <Route path='/robot' element={<CreateRobot />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+          <Routes>
+            <Route path='/' element={<RobotHome />} />
+            <Route path='/robot' element={<CreateRobot />} />
+          </Routes>
+      </Router>
+    </div>
     );
 }
 
