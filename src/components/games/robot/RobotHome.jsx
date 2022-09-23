@@ -1,12 +1,13 @@
-import React, { useContext } from 'react'
-import { RobotContext, RobotImage, Robots } from './robotContext'
+import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { RobotContext, RobotImageContext } from './robotContext'
 
 export default function RobotHome (){
     const robotDetails = {imageUrl : "",name : "",function : ""}
-    const robotImage = useContext(RobotImage);
-    const robots = useContext(Robots)
-    return <>
-        <RobotContext.Provider value={{robotImage, robots}}>
+    const robotImage = useContext(RobotImageContext);
+    const robots = useContext(RobotContext);
+    return (
+        <RobotContext.Provider value={{robotImage, robots, robotDetails}}>
             <h2>Hey ! Wanna play a game ?</h2>
             <p>Then, create any robot you.</p>
             <table>
@@ -19,7 +20,9 @@ export default function RobotHome (){
                 <tfoot>
                     <tr>
                         <td>Créer un robot</td>
-                        <td>Voir la list des robots</td>
+                        <td> 
+                            <Link to="/robot">Create a robot</Link>
+                        </td>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -33,7 +36,12 @@ export default function RobotHome (){
                     }
                 </tbody>
             </table>
+            <button onClick={()=>{
+                robotImage.map((element)=>(robots.push(element)));
+                robots.push('2');
+                console.log(robots);
+            }}>Click me</button>
 
         </RobotContext.Provider>
-    </>
+    )
 }
