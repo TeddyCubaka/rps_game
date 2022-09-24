@@ -5,10 +5,10 @@ import { RobotContext, RobotImageContext } from "./robotContext";
 export default function CreateRobot() {
   const robots = useContext(RobotContext);
   const robotImage = useContext(RobotImageContext);
-  const robotDetails = { imageUrl: "", name: "", function: "" };
+  const robotDetails = { image: {}, name: "", function: "" };
   const [error, setError] = useState("");
   return (
-    <div className="create-div">
+    <div className="create-div robot-home">
       <label forhtml="name">Name your robot</label>
       <input
         type="text"
@@ -29,7 +29,8 @@ export default function CreateRobot() {
               key={index}
               className="img-test"
               onClick={() => {
-                robotDetails.imageUrl = image.imageUrl;
+                robotDetails.image = image;
+                console.log(image)
               }}
             />
           ))}
@@ -46,10 +47,10 @@ export default function CreateRobot() {
         }}
       />
       <button
-        onClick={(e) => {
+        onClick={() => {
+          if(robotDetails.imageUrl == "")robotDetails.imageUrl = robotImage[0];
           if (
             robotDetails.name !== "" &&
-            robotDetails.imageUrl !== "" &&
             robotDetails.function !== ""
           ) {
             robots.push(robotDetails);
