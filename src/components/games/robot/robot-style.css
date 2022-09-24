@@ -23,3 +23,8 @@ th {
   display: grid;
   grid-template-columns: 50px 180px;
 }
+a{
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
