@@ -17,12 +17,14 @@ export default function RobotHome() {
         <table>
           <thead>
             <tr>
+              <th>Index</th>
               <th>Robot you create</th>
               <th>Default robot</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
+              <td>  </td>
               <td>
                 <Link to="/robot">Create a robot</Link>
               </td>
@@ -32,12 +34,11 @@ export default function RobotHome() {
           <tbody>
             {robotImage.map((image, index) => (
               <tr key={index}>
+                <td> {index+1} </td>
                 <td>
-                  {index + 1}
                   {robots[index] ? (
                     <RobotCard
                       robot={robots[index]}
-                      index={index}
                       key={index}
                     />
                   ) : (
@@ -45,7 +46,10 @@ export default function RobotHome() {
                   )}
                 </td>
                 <td>
-                  <img src={image} alt="" className="img-test" />
+                  <RobotCard
+                  robot={image}
+                  key = {image.name}
+                  />
                 </td>
               </tr>
             ))}

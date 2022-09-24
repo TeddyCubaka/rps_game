@@ -24,12 +24,12 @@ export default function CreateRobot() {
           <summary>Choose a profil for your robot</summary>
           {robotImage.map((image, index) => (
             <img
-              src={image}
-              alt=""
+              src={image.imageUrl}
+              alt={image.alt}
               key={index}
               className="img-test"
               onClick={() => {
-                robotDetails.imageUrl = image;
+                robotDetails.imageUrl = image.imageUrl;
               }}
             />
           ))}

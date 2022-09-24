@@ -13,7 +13,7 @@ table {
 table > tr {
   height: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 20px 1fr 1fr;
 }
 th {
   text-align: left;
@@ -21,5 +21,5 @@ th {
 .robot-card {
   width: 100%;
   display: grid;
-  grid-template-columns: 50px 220px;
+  grid-template-columns: 50px 180px;
 }
