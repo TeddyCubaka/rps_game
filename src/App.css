@@ -31,3 +31,14 @@ button {
   width: 40px;
   height: 40px;
 }
+.disp_column{
+  display: flex;
+  flex-direction: column;
+}
+.back_home{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
