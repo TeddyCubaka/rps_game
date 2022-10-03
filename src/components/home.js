@@ -6,7 +6,8 @@ export default function Home (){
         <div className="disp_column">
             <h2>Wanna play which games ?</h2>
             <Link to="robot">Do you wont to create robot's</Link>
-            <Link to="clipboard">Or copy texts ?</Link>
+            <Link to="clipboard">Copy texts ?</Link>
+            <Link to="contact">Or create contacts</Link>
         </div>
     )
 }
