@@ -25,7 +25,8 @@ export default function Contact (){
                 <div> {contacts.length} </div>
             </div>
             <button onClick={()=>{
-                console.log(contacts)
+                const quiz = prompt("Tu m'aimes ?", '')
+                alert(quiz)
             }}>click me</button>
         </div>
     )
