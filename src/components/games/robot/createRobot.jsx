@@ -62,7 +62,7 @@ export default function CreateRobot() {
       >
         Create a new robot
       </button>
-      <Link to="/">Back to home</Link>
+      <Link to="/robot">Back to home</Link>
       <span> {error} </span>
     </div>
   );
