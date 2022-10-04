@@ -44,7 +44,10 @@ export default function Contact (){
                     </tbody>
                 </table>
             </div>
-            <Link to="/contact/create_contacts" >Create a contact</Link>
+            <div>
+                <Link to="/contact/create_contacts">Create a contact</Link>
+                <Link to="/contact/modifie_contact">Modifie a contact contact</Link>
+            </div>
         </div>
     )
 }
