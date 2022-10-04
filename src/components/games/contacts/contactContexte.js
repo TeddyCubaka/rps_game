@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { createContext } from "react";
 
 
-export const contactContext = useContext("") 
+export const contactContext = createContext("") 
