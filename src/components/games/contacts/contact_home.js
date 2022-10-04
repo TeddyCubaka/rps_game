@@ -18,12 +18,31 @@ export default function Contact (){
     return (
         <div>
             <div>
-                <ul>
-                    {contacts.length ? contacts.map((element)=>(<>
-                        <li key={element.id}> {element.name} </li>
-                    </>)) : <span>Siuuu</span>}
-                </ul>
-                <div> {contacts.length} </div>
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>contact's fullname</th>
+                            <th>Contact's Bio</th>
+                            <th>Contact's Groupe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {contacts.length ? contacts.map((element, index)=>(<>
+                            <tr key={element.id}>
+                                <td key={index}> {index+1} </td>
+                                <td key={index+100}> {element.name} {element.secondName} </td>
+                                <td key={index+200}> {element.bio} </td>
+                                <td key={index+300}> {element.groupe} </td>
+                            </tr>
+                        </>)) : <tr>
+                            <td> here's</td>
+                            <td>No</td>
+                            <td> data </td>
+                        </tr>}
+                    </tbody>
+                </table>
             </div>
             <Link to="/contact/create_contacts" >Create a contact</Link>
         </div>
