@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Contact (){
     const [contacts, setContacts] = useState([])
     const arr = [];
     useEffect(()=>{
-        const api = fetch('http://localhost:4000/api/contacts')
+        fetch('http://localhost:4000/api/contacts')
             .then((response)=> response.json().then((data)=> {
                 data.map((elem)=> {
                     arr.push(elem);
@@ -24,10 +25,7 @@ export default function Contact (){
                 </ul>
                 <div> {contacts.length} </div>
             </div>
-            <button onClick={()=>{
-                const quiz = prompt("Tu m'aimes ?", '')
-                alert(quiz)
-            }}>click me</button>
+            <Link to="/contact/create_contacts" >Create a contact</Link>
         </div>
     )
 }

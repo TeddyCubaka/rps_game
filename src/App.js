@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import TextArea from "./components/clipboard/clipboard";
 import Contact from "./components/games/contacts/contact_home";
+import CreateContacts from "./components/games/contacts/create_contacts";
 import CreateRobot from "./components/games/robot/createRobot";
 import RobotHome from "./components/games/robot/RobotHome";
 import Home from "./components/home";
@@ -14,9 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/robot" element={<RobotHome />} />
-          <Route path="/create_robot" element={<CreateRobot />} />
+          <Route path="/robot/create_robot" element={<CreateRobot />} />
           <Route path="/clipboard" element={<TextArea />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/contact/create_contacts" element={<CreateContacts />} />
         </Routes>
       </Router>
     </div>

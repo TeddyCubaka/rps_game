@@ -26,7 +26,7 @@ export default function RobotHome() {
             <tr>
               <td>  </td>
               <td>
-                <Link to="/create_robot">Create a robot</Link>
+                <Link to="/robot/create_robot">Create a robot</Link>
               </td>
               <td>Search a robot</td>
             </tr>
